@@ -1,5 +1,10 @@
 body {
-  background-color: #ffc0cb; 
+  background-color: #ffc0cb;
+  /* Prevent content from hiding under fixed navbar on mobile */
+  padding-top: 56px;
+  padding-top: max(56px, env(safe-area-inset-top));
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
 }
 
 .bg-custom-dark {
@@ -22,11 +27,52 @@ body {
   color: #212529;
 }
 
-/* Center hero image */
+/* Main content wrapper - consistent padding on all screens */
+.main-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Center and scale hero image for mobile */
 .photo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Mobile-friendly section spacing and typography */
+@media (max-width: 767px) {
+  .main-content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .scrollspy-example {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .scrollspy-example h4 {
+    font-size: 1.25rem;
+  }
+
+  .scrollspy-example p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Larger tap targets for editable text */
+  .editable-paragraph {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 /* Editable paragraphs */
