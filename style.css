@@ -1,0 +1,47 @@
+body {
+  background-color: #ffc0cb; 
+}
+
+.bg-custom-dark {
+  background-color: #343a40 !important; 
+}
+
+.bg-custom-light {
+  background-color: #ffffff !important; 
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #212529; 
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #343a40; 
+}
+
+.navbar-light .navbar-brand {
+  color: #212529;
+}
+
+/* Center hero image */
+.photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Editable paragraphs */
+.editable-paragraph {
+  min-height: 1.5em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  outline: none;
+}
+
+.editable-paragraph:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.editable-paragraph:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
